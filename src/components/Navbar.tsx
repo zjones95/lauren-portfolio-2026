@@ -32,7 +32,7 @@ const Navbar = () => {
         onClick={() => navigate("/")}
         sx={{ cursor: "pointer" }}
       >
-        <img src="src/assets/mr_bear.png" width={32} height={32} />
+        <img src="mr_bear.png" width={32} height={32} />
         <Typography variant="h1" fontSize={32}>
           Lauren Pickering
         </Typography>
