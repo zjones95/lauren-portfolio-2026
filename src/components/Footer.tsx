@@ -8,6 +8,7 @@ const Footer = () => {
       sx={{
         maxWidth: "1280px",
         py: 2,
+        borderTop: "2px solid #878780",
       }}
     >
       <Typography>laurenpickering.design</Typography>
