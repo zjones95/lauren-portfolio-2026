@@ -15,6 +15,10 @@ const Lightbox = () => {
       if (e.key === "ArrowRight") {
         incrementIndex();
       }
+
+      if (e.key === "Escape") {
+        closeLightbox();
+      }
     };
 
     window.addEventListener("keydown", handleLightboxIndexChange);
@@ -22,7 +26,7 @@ const Lightbox = () => {
     return () => {
       window.removeEventListener("keydown", handleLightboxIndexChange);
     };
-  }, [incrementIndex, decrementIndex]);
+  }, [incrementIndex, decrementIndex, closeLightbox]);
 
   return (
     <Stack
