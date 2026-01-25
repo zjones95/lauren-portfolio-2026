@@ -11,21 +11,21 @@ const Image = ({ src, alt, variant, index }: ImageData & { index: number }) => {
     <Box
       sx={{
         position: "relative",
-        flex: variant === "square" ? "1 1 300px" : "1 1 500px",
+        flex: variant === "square" ? "1 1 300px" : "1 1 600px",
         minWidth: "300px",
         maxWidth: variant === "wide" ? "600px" : "420px",
       }}
     >
       <Box
         sx={{
-          display: "flex",
+          display: { xs: "none", md: "flex" },
           justifyContent: "center",
           alignItems: "center",
           position: "absolute",
           top: 0,
           left: 0,
           width: "100%",
-          height: "100%",
+          height: "300px",
           "&:hover": {
             backgroundColor: "rgba(0, 0, 0, 0.3)",
           },
