@@ -11,7 +11,7 @@ const Footer = () => {
         borderTop: "2px solid #878780",
       }}
     >
-      <Typography>laurenpickering.design</Typography>
+      <Typography>laurenpickering.art</Typography>
       <Typography>2026 ©</Typography>
     </Stack>
   );

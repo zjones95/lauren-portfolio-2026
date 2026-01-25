@@ -2,18 +2,18 @@ import type { ImageData } from "./types";
 
 export const IMAGES: ImageData[] = [
   {
-    src: "when-do-dogs-stop-growing.webp",
-    alt: "Image 1",
+    src: "cozy-bear.jpg",
+    alt: "Cozy Bear",
     variant: "square",
   },
   {
-    src: "when-do-dogs-stop-growing.webp",
-    alt: "Image 2",
+    src: "office-space.jpg",
+    alt: "Office Space",
     variant: "square",
   },
   {
-    src: "when-do-dogs-stop-growing.webp",
-    alt: "Image 3",
+    src: "dragon.jpg",
+    alt: "Dragon",
     variant: "square",
   },
   {

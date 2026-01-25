@@ -6,11 +6,15 @@ export const useLightboxContext = () => useContext(LightboxContext);
 export const LightboxContext = createContext<{
   isOpen: boolean;
   currentImage: ImageData | null;
-  openLightbox: (image: ImageData) => void;
+  openLightbox: (image: ImageData & { index: number }) => void;
   closeLightbox: () => void;
+  incrementIndex: () => void;
+  decrementIndex: () => void;
 }>({
   isOpen: false,
   currentImage: null,
   openLightbox: () => {},
   closeLightbox: () => {},
+  incrementIndex: () => {},
+  decrementIndex: () => {},
 });

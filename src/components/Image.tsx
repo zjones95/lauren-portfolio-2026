@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 import { LightboxContext } from "../providers/LightboxContext";
 import "./Image.styles.css";
 
-const Image = ({ src, alt, variant }: ImageData) => {
+const Image = ({ src, alt, variant, index }: ImageData & { index: number }) => {
   const { openLightbox } = useContext(LightboxContext);
 
   return (
@@ -32,7 +32,7 @@ const Image = ({ src, alt, variant }: ImageData) => {
           transition: "background-color 0.2s ease",
           cursor: "pointer",
         }}
-        onClick={() => openLightbox({ src, alt, variant })}
+        onClick={() => openLightbox({ src, alt, variant, index })}
       />
       <img key={src} src={src} alt={alt} className={`img-${variant}`} />
     </Box>

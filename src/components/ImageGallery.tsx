@@ -13,9 +13,11 @@ const ImageGallery = ({ images = [] }: { images: ImageData[] }) => {
         justifyContent: { xs: "center", lg: "unset" },
       }}
     >
-      {images.map((imgData) => {
+      {images.map((imgData, i) => {
         const { src, alt, variant } = imgData;
-        return <Image key={src} src={src} alt={alt} variant={variant} />;
+        return (
+          <Image key={src} src={src} alt={alt} variant={variant} index={i} />
+        );
       })}
     </Stack>
   );

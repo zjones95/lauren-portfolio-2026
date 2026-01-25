@@ -1,8 +1,28 @@
 import { Stack } from "@mui/material";
 import { useLightboxContext } from "../providers/LightboxContext";
+import { useEffect } from "react";
 
 const Lightbox = () => {
-  const { closeLightbox, currentImage } = useLightboxContext();
+  const { closeLightbox, currentImage, incrementIndex, decrementIndex } =
+    useLightboxContext();
+
+  useEffect(() => {
+    const handleLightboxIndexChange = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") {
+        decrementIndex();
+      }
+
+      if (e.key === "ArrowRight") {
+        incrementIndex();
+      }
+    };
+
+    window.addEventListener("keydown", handleLightboxIndexChange);
+
+    return () => {
+      window.removeEventListener("keydown", handleLightboxIndexChange);
+    };
+  }, [incrementIndex, decrementIndex]);
 
   return (
     <Stack
