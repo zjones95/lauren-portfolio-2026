@@ -21,10 +21,11 @@ const Contact = () => {
     });
   };
 
-  console.log({ formData });
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  };
 
   const isFormFilled = Object.values(formData).every((v) => v.length > 0);
-  console.log({ isFormFilled });
 
   return (
     <Stack
@@ -35,6 +36,7 @@ const Contact = () => {
         margin: "auto",
       }}
       spacing={4}
+      onSubmit={handleSubmit}
     >
       <Typography variant="h2" fontSize={32}>
         Contact
