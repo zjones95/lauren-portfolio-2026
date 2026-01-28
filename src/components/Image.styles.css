@@ -13,6 +13,13 @@
   object-fit: cover;
 }
 
+.img-wide {
+  min-width: 300px;
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+}
+
 @media only screen and (max-width: 600px) {
   .img-wide {
     min-width: 300px;

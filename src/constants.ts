@@ -19,6 +19,6 @@ export const IMAGES: ImageData[] = [
   {
     src: "kitty-kiara.jpg",
     alt: "Kitty Kiara",
-    variant: "square",
+    variant: "tall",
   },
 ];
