@@ -1,5 +1,5 @@
 export type ImageData = {
   src: string;
   alt: string;
-  variant: "square" | "wide";
+  variant: "square" | "wide" | "tall";
 };
