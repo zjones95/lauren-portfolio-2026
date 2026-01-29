@@ -8,6 +8,10 @@ const LINKS = [
     route: "/",
   },
   {
+    title: "About",
+    route: "/about",
+  },
+  {
     title: "Contact",
     route: "/contact",
   },

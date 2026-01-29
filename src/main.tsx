@@ -11,6 +11,7 @@ import Footer from "./components/Footer.tsx";
 import Navbar from "./components/Navbar.tsx";
 import Lightbox from "./components/Lightbox.tsx";
 import Contact from "./pages/Contact.tsx";
+import About from "./pages/About.tsx";
 
 const theme = createTheme({
   typography: {
@@ -43,6 +44,7 @@ createRoot(document.getElementById("root")!).render(
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/about" element={<About />} />
               </Routes>
             </Stack>
             <Footer />
