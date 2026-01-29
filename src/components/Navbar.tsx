@@ -1,4 +1,5 @@
-import { Stack, Typography } from "@mui/material";
+import { LinkedIn } from "@mui/icons-material";
+import { IconButton, Stack, Typography } from "@mui/material";
 import { useNavigate } from "react-router";
 import { Link } from "react-router";
 
@@ -41,7 +42,7 @@ const Navbar = () => {
           Lauren Pickering
         </Typography>
       </Stack>
-      <Stack direction="row" spacing={4} sx={{ py: 1 }}>
+      <Stack direction="row" spacing={4} sx={{ py: 1 }} alignItems="center">
         {LINKS.map((linkData) => (
           <Link
             to={linkData.route}
@@ -53,6 +54,15 @@ const Navbar = () => {
             {linkData.title}
           </Link>
         ))}
+        <a
+          href="https://www.linkedin.com/in/lauren-a-pickering/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <IconButton>
+            <LinkedIn />
+          </IconButton>
+        </a>
       </Stack>
     </Stack>
   );

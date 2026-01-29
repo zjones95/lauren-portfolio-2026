@@ -1,25 +1,53 @@
 import { Button, Divider, Stack, Typography } from "@mui/material";
+import { useNavigate } from "react-router";
 
 const About = () => {
+  const navigate = useNavigate();
+
   return (
     <Stack
-      direction={{ xs: "column", lg: "row" }}
+      direction={{ xs: "column-reverse", lg: "row" }}
       spacing={6}
+      sx={{
+        py: { xs: 0, lg: 2 },
+        maxWidth: "1000px",
+        px: 2,
+        minHeight: "600px",
+        wrap: "wrap-reverse",
+      }}
       alignItems="center"
-      sx={{ py: { xs: 0, lg: 2 }, maxWidth: "1000px", px: 2 }}
-      flexWrap={{ xs: "wrap", lg: "initial" }}
       justifyContent="center"
     >
-      <img
-        src="about.png"
-        style={{
-          width: "300px",
-          height: "300px",
-          objectFit: "cover",
-          borderRadius: "12px",
-          border: "4px solid #1976d2",
-        }}
-      />
+      <Stack spacing={3}>
+        <Typography variant="h4">About Me</Typography>
+        <Typography variant="body1" fontFamily="sans-serif">
+          Hi! I’m Lauren Pickering, a Mexican-American illustrator and
+          children’s art teacher based in the Bay Area. I enjoy creating story
+          driven moments that feel like comfort, nostalgia, and a little bit of
+          magic.
+        </Typography>
+        <Typography variant="body1" fontFamily="sans-serif">
+          Teaching art to children keeps me close to curiosity and joyful
+          storytelling. Outside of the classroom, I’m a hip hop
+          dancer/choreographer who believes collaboration is the best way to
+          make something special. I also find inspiration in precious family
+          moments, hiking with my friends, or cuddling with my 3 cats.
+        </Typography>
+        <Typography variant="body1" fontFamily="sans-serif">
+          I’ve received my B.A. in Animation & Illustration, with a focus in
+          Entertainment and have experience in production style collaboration,
+          whether Character Design, Research/Development, and Rigging.
+        </Typography>
+        <Typography variant="body1" fontFamily="sans-serif">
+          When I’m drawing at home, you’ll often hear my black fluffy cat
+          Bubbles chirping for attention while my Siamese cat Frank is sitting
+          on my lap purring like a motorboat. Those are the moments I want to
+          pause and capture in art… moments of love!
+        </Typography>
+        <Button variant="contained" onClick={() => navigate("/contact")}>
+          Get In Touch!
+        </Button>
+      </Stack>
       <Divider
         orientation="vertical"
         flexItem
@@ -34,24 +62,14 @@ const About = () => {
           display: { xs: "flex", lg: "none" },
         }}
       />
-      <Stack spacing={2}>
-        <Typography variant="h4">About Me</Typography>
-        <Typography variant="body1">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
-        </Typography>
-        <Typography variant="body1">
-          It was popularised in the 1960s with the release of Letraset sheets
-          containing Lorem Ipsum passages, and more recently with desktop
-          publishing software like Aldus PageMaker including versions of Lorem
-          Ipsum.
-        </Typography>
-        <Button variant="contained">Get In Touch!</Button>
-      </Stack>
+      <img
+        src="about.png"
+        style={{
+          width: "350px",
+          objectFit: "cover",
+          border: "2px solid black",
+        }}
+      />
     </Stack>
   );
 };
