@@ -12,12 +12,16 @@ import Navbar from "./components/Navbar.tsx";
 import Lightbox from "./components/Lightbox.tsx";
 import Contact from "./pages/Contact.tsx";
 import About from "./pages/About.tsx";
+import { green } from "@mui/material/colors";
 
 const theme = createTheme({
   typography: {
     allVariants: {
       fontFamily: "Winky Sans",
     },
+  },
+  palette: {
+    primary: green,
   },
 });
 
