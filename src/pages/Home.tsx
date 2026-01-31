@@ -1,14 +1,15 @@
 import "../App.css";
 import { IMAGES } from "../constants";
 import ImageGallery from "../components/ImageGallery";
-import { FunctionsHttpError } from "@supabase/supabase-js";
 import { useEffect, useState } from "react";
 import { supabase } from "../utils";
 
 function Home() {
-  const [imageData, setImageData] = useState<any[]>([]);
+  // const [imageData, setImageData] = useState([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
+
+  console.log({loading, error})
 
   useEffect(() => {
     async function getImages() {
@@ -16,7 +17,7 @@ function Home() {
       const { data, error } = await supabase.from("images").select();
       
       if (data) {
-        setImageData(data);
+        // setImageData(data);
       }
 
       if(error) {
