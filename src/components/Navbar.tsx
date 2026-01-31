@@ -45,6 +45,7 @@ const Navbar = () => {
       <Stack direction="row" spacing={4} sx={{ py: 1 }} alignItems="center">
         {LINKS.map((linkData) => (
           <Link
+            key={linkData.title}
             to={linkData.route}
             style={{
               textDecoration: "none",

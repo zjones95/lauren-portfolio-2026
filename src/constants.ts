@@ -22,3 +22,6 @@ export const IMAGES: ImageData[] = [
     variant: "tall",
   },
 ];
+
+export const supabaseUrl = import.meta.env.REACT_APP_SUPABASE_URL;
+export const supabaseKey = import.meta.env.REACT_APP_SUPABASE_PUBLISHABLE_KEY;
