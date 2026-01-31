@@ -9,7 +9,6 @@ const About = () => {
       direction={{ xs: "column-reverse", lg: "row" }}
       spacing={6}
       sx={{
-        py: { xs: 0, lg: 2 },
         maxWidth: "1000px",
         px: 2,
         minHeight: "600px",

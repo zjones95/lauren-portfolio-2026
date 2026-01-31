@@ -13,16 +13,14 @@ function Home() {
   useEffect(() => {
     async function getImages() {
       setLoading(true);
-      try {
-        const { data } = await supabase.from("images").select();
-        if (data) {
-          console.log({ data });
-          setImageData(data);
-        }
-      } catch (error) {
-        if (error instanceof FunctionsHttpError) {
-          setError(error.context.json());
-        }
+      const { data, error } = await supabase.from("images").select();
+      
+      if (data) {
+        setImageData(data);
+      }
+
+      if(error) {
+        setError(error.message)
       }
       setLoading(false);
     }

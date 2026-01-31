@@ -23,5 +23,5 @@ export const IMAGES: ImageData[] = [
   },
 ];
 
-export const supabaseUrl = import.meta.env.REACT_APP_SUPABASE_URL;
-export const supabaseKey = import.meta.env.REACT_APP_SUPABASE_PUBLISHABLE_KEY;
+export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+export const supabaseKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
