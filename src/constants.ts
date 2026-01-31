@@ -21,6 +21,11 @@ export const IMAGES: ImageData[] = [
     alt: "Kitty Kiara",
     variant: "tall",
   },
+  {
+    src: "bled.jpg",
+    alt: "Lake Bled",
+    variant: "tall",
+  },
 ];
 
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;

@@ -4,7 +4,7 @@ import { AuthContext } from "./AuthContext";
 import { supabase } from "../utils";
 
 const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const [claims, setClaims] = useState<JwtPayload | null | undefined>(null);
+  const [claims, setClaims] = useState<JwtPayload | null | undefined>(undefined);
   const [authError, setAuthError] = useState<AuthError | null>(null);
   const [authLoading, setAuthLoading] = useState<boolean>(false);
 

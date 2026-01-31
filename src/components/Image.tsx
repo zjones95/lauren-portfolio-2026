@@ -13,7 +13,7 @@ const Image = ({ src, alt, variant, index }: ImageData & { index: number }) => {
         position: "relative",
         flex: variant === "square" ? "1 1 300px" : "1 1 600px",
         minWidth: "300px",
-        maxWidth: variant === "wide" ? "600px" : "420px",
+        maxWidth: variant === "wide" ? "600px" : "400px",
       }}
     >
       <Box
