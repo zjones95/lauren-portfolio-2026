@@ -8,6 +8,10 @@ const Lightbox = () => {
 
   useEffect(() => {
     const handleLightboxIndexChange = (e: KeyboardEvent) => {
+      if (!currentImage) {
+        return;
+      }
+
       if (e.key === "ArrowLeft") {
         decrementIndex();
       }
@@ -36,7 +40,7 @@ const Lightbox = () => {
         height: "100vh",
         top: 0,
         left: 0,
-        backgroundColor: "rgba(0, 0, 0, 0.2)",
+        backgroundColor: "rgba(0, 0, 0, 0.8)",
         opacity: currentImage ? 1 : 0,
         pointerEvents: currentImage ? "unset" : "none",
         transition: "opacity 0.2s ease",
