@@ -31,6 +31,41 @@ export const IMAGES: ImageData[] = [
     alt: "Space",
     variant: "tall",
   },
+  {
+    src: "mermaid.jpg",
+    alt: "Mermaid",
+    variant: "square",
+  },
+  {
+    src: "josie-1.jpg",
+    alt: "Josie 1",
+    variant: "tall-contained",
+  },
+  {
+    src: "josie-2.jpg",
+    alt: "Josie 2",
+    variant: "tall-contained",
+  },
+  {
+    src: "book-storyboard.jpg",
+    alt: "Book Storyboard",
+    variant: "square",
+  },
+  {
+    src: "book-storyboard-2.png",
+    alt: "Book Storyboard 2",
+    variant: "square",
+  },
+  {
+    src: "book-storyboard-3.png",
+    alt: "Book Storyboard 3",
+    variant: "square",
+  },
+  {
+    src: "hands.jpg",
+    alt: "Hands",
+    variant: "square",
+  },
 ];
 
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;

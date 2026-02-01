@@ -1,7 +1,7 @@
 export type ImageData = {
   src: string;
   alt: string;
-  variant: "square" | "wide" | "tall";
+  variant: "square" | "wide" | "tall" | "tall-contained";
 };
 
 export interface FilePayload {
