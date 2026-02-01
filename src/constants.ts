@@ -3,17 +3,17 @@ import type { ImageData } from "./types";
 export const IMAGES: ImageData[] = [
   {
     src: "cozy-bear.jpg",
-    alt: "Home Sweet Home",
+    alt: "Home Sweet Home - Watercolor",
     variant: "square",
   },
   {
     src: "office-space.jpg",
-    alt: "Office Space",
+    alt: "Office Space - Oil Pastel",
     variant: "square",
   },
   {
     src: "dragon.jpg",
-    alt: "Year of The Dragon",
+    alt: "Year of The Dragon - Photoshop",
     variant: "square",
   },
   {
