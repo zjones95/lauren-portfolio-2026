@@ -14,6 +14,7 @@ const Image = ({ src, alt, variant, index }: ImageData & { index: number }) => {
         flex: variant === "square" ? "1 1 300px" : "1 1 600px",
         minWidth: "300px",
         maxWidth: variant === "wide" ? "600px" : "400px",
+        height: variant === "tall" ? "500px" : "300px",
       }}
     >
       <Box
@@ -25,7 +26,7 @@ const Image = ({ src, alt, variant, index }: ImageData & { index: number }) => {
           top: 0,
           left: 0,
           width: "100%",
-          height: "300px",
+          height: variant === "tall" ? "500px" : "300px",
           "&:hover": {
             backgroundColor: "rgba(0, 0, 0, 0.3)",
           },
