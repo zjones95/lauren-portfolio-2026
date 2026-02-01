@@ -30,7 +30,7 @@ const Lightbox = () => {
     return () => {
       window.removeEventListener("keydown", handleLightboxIndexChange);
     };
-  }, [incrementIndex, decrementIndex, closeLightbox]);
+  }, [incrementIndex, decrementIndex, closeLightbox, currentImage]);
 
   return (
     <Stack

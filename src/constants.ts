@@ -26,7 +26,15 @@ export const IMAGES: ImageData[] = [
     alt: "Lake Bled",
     variant: "tall",
   },
+  {
+    src: "space.jpg",
+    alt: "Space",
+    variant: "tall",
+  },
 ];
 
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 export const supabaseKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+
+export const SUPABASE_IMAGE_URL =
+  "https://zkwesxsqshbfnsnstbvs.supabase.co/storage/v1/object/";

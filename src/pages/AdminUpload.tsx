@@ -13,7 +13,8 @@ import styled from "@emotion/styled";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { useState } from "react";
 import type { FilePayload } from "../types";
-import { supabase } from "../utils";
+import { generateRandomId, supabase } from "../utils";
+import { SUPABASE_IMAGE_URL } from "../constants";
 
 const VisuallyHiddenInput = styled("input")({
   clip: "rect(0 0 0 0)",
@@ -65,12 +66,20 @@ const AdminUpload = () => {
       return;
     }
 
-    console.log(supabase.auth.getUser());
-    const { data } = await supabase.storage
-      .from("images")
-      .upload(`public/${uploadedFile.name}`, uploadedFile);
+    const randomId = generateRandomId();
 
-    console.log(data?.path);
+    const { data, error: imageUploadError } = await supabase.storage
+      .from("images")
+      .upload(`public/${uploadedFile.name}-${randomId}`, uploadedFile);
+
+    if (!imageUploadError) {
+      await supabase.from("images").insert([
+        {
+          ...payload,
+          url: `${SUPABASE_IMAGE_URL}/${data.fullPath}`,
+        },
+      ]);
+    }
   };
 
   return (

@@ -9,19 +9,20 @@ function Home() {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
 
-  console.log({loading, error})
+  console.log({ loading, error });
 
   useEffect(() => {
     async function getImages() {
       setLoading(true);
-      const { data, error } = await supabase.from("images").select();
-      
+      const { data, error } = await supabase.from("images").select("*");
+
       if (data) {
         // setImageData(data);
+        console.log({ data });
       }
 
-      if(error) {
-        setError(error.message)
+      if (error) {
+        setError(error.message);
       }
       setLoading(false);
     }
