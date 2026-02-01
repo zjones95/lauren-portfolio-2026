@@ -39,7 +39,7 @@ const Image = ({ src, alt, variant, index }: ImageData & { index: number }) => {
         justifyContent="center"
         alignItems="center"
       >
-        <Typography color="white" maxWidth="80%" textAlign="center">
+        <Typography color="white" textAlign="center" px={1}>
           {alt}
         </Typography>
       </Stack>
