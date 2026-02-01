@@ -3,7 +3,7 @@ import type { ImageData } from "./types";
 export const IMAGES: ImageData[] = [
   {
     src: "cozy-bear.jpg",
-    alt: "Cozy Bear",
+    alt: "Home Sweet Home",
     variant: "square",
   },
   {
@@ -13,57 +13,57 @@ export const IMAGES: ImageData[] = [
   },
   {
     src: "dragon.jpg",
-    alt: "Dragon",
+    alt: "Year of The Dragon",
     variant: "square",
   },
   {
     src: "kitty-kiara.jpg",
-    alt: "Kitty Kiara",
+    alt: "Kitty Kiara - Acrylic Paint",
     variant: "tall",
   },
   {
     src: "bled.jpg",
-    alt: "Lake Bled",
+    alt: "A Rainy Day - Watercolor",
     variant: "tall",
   },
   {
     src: "space.jpg",
-    alt: "Space",
+    alt: "Luna Eyes - Acrylic Paint",
     variant: "tall",
   },
   {
     src: "mermaid.jpg",
-    alt: "Mermaid",
+    alt: "Kaylani - Photoshop Illustration",
     variant: "square",
   },
   {
     src: "josie-1.jpg",
-    alt: "Josie 1",
+    alt: "Cambio de Josie - Book Cover - Photoshop Illustration",
     variant: "tall-contained",
   },
   {
     src: "josie-2.jpg",
-    alt: "Josie 2",
+    alt: "Cambio de Josie - Movie Poster - Photoshop Illustration",
     variant: "tall-contained",
   },
   {
-    src: "book-storyboard.jpg",
-    alt: "Book Storyboard",
-    variant: "square",
-  },
-  {
     src: "book-storyboard-2.png",
-    alt: "Book Storyboard 2",
+    alt: "Love We All Need - Page 1",
     variant: "square",
   },
   {
     src: "book-storyboard-3.png",
-    alt: "Book Storyboard 3",
+    alt: "Love We All Need - Page 2",
+    variant: "square",
+  },
+  {
+    src: "book-storyboard.jpg",
+    alt: "Love We All Need - Page 3",
     variant: "square",
   },
   {
     src: "hands.jpg",
-    alt: "Hands",
+    alt: "Hand Study",
     variant: "square",
   },
 ];

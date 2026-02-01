@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import type { ImageData } from "../types";
-import { Box } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import { LightboxContext } from "../providers/LightboxContext";
 import "./Image.styles.css";
 
@@ -17,7 +17,7 @@ const Image = ({ src, alt, variant, index }: ImageData & { index: number }) => {
         height: variant === "tall" ? "500px" : "300px",
       }}
     >
-      <Box
+      <Stack
         sx={{
           display: { xs: "none", md: "flex" },
           justifyContent: "center",
@@ -27,14 +27,22 @@ const Image = ({ src, alt, variant, index }: ImageData & { index: number }) => {
           left: 0,
           width: "100%",
           height: variant === "tall" ? "500px" : "300px",
+          backgroundColor: "rgba(0, 0, 0, 0.3)",
+          opacity: 0,
           "&:hover": {
-            backgroundColor: "rgba(0, 0, 0, 0.3)",
+            opacity: 1,
           },
-          transition: "background-color 0.2s ease",
+          transition: "opacity 0.2s ease",
           cursor: "pointer",
         }}
         onClick={() => openLightbox({ src, alt, variant, index })}
-      />
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Typography color="white" maxWidth="80%" textAlign="center">
+          {alt}
+        </Typography>
+      </Stack>
       <img key={src} src={src} alt={alt} className={`img-${variant}`} />
     </Box>
   );
