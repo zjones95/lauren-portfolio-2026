@@ -51,9 +51,6 @@ const Lightbox = () => {
     >
       {currentImage ? (
         <Stack spacing={2}>
-          <Typography color="white" variant="h4" textAlign="center">
-            {currentImage.alt}
-          </Typography>
           <img
             alt={`lightbox-${currentImage.alt}`}
             src={currentImage.src}
@@ -65,6 +62,14 @@ const Lightbox = () => {
               objectFit: "contain",
             }}
           />
+          <Typography
+            color="white"
+            variant="h5"
+            textAlign="center"
+            fontFamily="sans-serif"
+          >
+            {currentImage.alt}
+          </Typography>
         </Stack>
       ) : null}
     </Stack>
