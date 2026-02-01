@@ -1,4 +1,4 @@
-import { Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import { useLightboxContext } from "../providers/LightboxContext";
 import { useEffect } from "react";
 
@@ -50,17 +50,22 @@ const Lightbox = () => {
       onClick={() => closeLightbox()}
     >
       {currentImage ? (
-        <img
-          alt={`lightbox-${currentImage.alt}`}
-          src={currentImage.src}
-          style={{
-            maxHeight: "1000px",
-            maxWidth: "1000px",
-            width: "100%",
-            height: "100%",
-            objectFit: "contain",
-          }}
-        />
+        <Stack spacing={2}>
+          <Typography color="white" variant="h4" textAlign="center">
+            {currentImage.alt}
+          </Typography>
+          <img
+            alt={`lightbox-${currentImage.alt}`}
+            src={currentImage.src}
+            style={{
+              maxHeight: "85vh",
+              maxWidth: "1000px",
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+            }}
+          />
+        </Stack>
       ) : null}
     </Stack>
   );
